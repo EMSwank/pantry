@@ -24,7 +24,7 @@ class PantryTest < Minitest::Test
   def test_it_adds_amount
     pantry = Pantry.new
     pantry.restock("Cheese", 10)
-    require 'pry'; binding.pry
+
     assert_equal 10, pantry.stock_check("Cheese")
   end
 end

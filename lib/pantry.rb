@@ -14,9 +14,9 @@ class Pantry
     @stock[pantry_item] = amount
   end
 
-  def restock(pantry_item, amount)
-    new_amount = stock_check + amount
-    @stock[pantry_item] = new_amount
+  def restock(pantry_item, new_amount)
+    amount = stock_check + new_amount
+    @stock[pantry_item] = amount
   end
 
 end
