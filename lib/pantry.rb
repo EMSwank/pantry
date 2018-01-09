@@ -1,11 +1,12 @@
 require 'recipe'
 
 class Pantry
-  attr_reader :stock, :amount
+  attr_reader :stock, :amount, :shopping_list
 
   def initialize
     @stock = {}
     @amount = 0
+    @shopping_list = {}
   end
 
   def stock_types
@@ -22,8 +23,8 @@ class Pantry
     @amount = total_amount
   end
 
-  def add_to_shopping_list(ingredient)
-    @ingredients
+  def add_to_shopping_list(list)
+    @shopping_list = list.ingredients
   end
 
 
