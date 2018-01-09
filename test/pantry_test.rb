@@ -16,8 +16,16 @@ class PantryTest < Minitest::Test
   end
 
   def test_it_can_add_item_to_check_stock
-    pantry = Pantry.new("Cheese")
+    pantry = Pantry.new
 
-    assert_equal 0, pantry.stock_check
+    assert_equal 0, pantry.stock_check("Cheese")
+  end
+
+  def test_it_adds_amount
+    
+    pantry = Pantry.new
+    pantry.restock("Cheese", 10)
+
+    assert_equal 10, pantry.stock_check("Cheese")
   end
 end

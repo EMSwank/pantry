@@ -3,9 +3,15 @@ class Pantry
 
   def initialize
     @stock = {}
+    # @item = item
   end
 
-  def stock_check(item, amount=0)
-    @stock[item] = amount
+  def restock(pantry_item, amount)
+    @stock[pantry_item] = amount
   end
+
+  def stock_check(pantry_item, amount=0)
+    @stock[pantry_item] = amount
+  end
+
 end
