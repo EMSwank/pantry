@@ -22,7 +22,6 @@ class PantryTest < Minitest::Test
   end
 
   def test_it_adds_amount
-    
     pantry = Pantry.new
     pantry.restock("Cheese", 10)
 

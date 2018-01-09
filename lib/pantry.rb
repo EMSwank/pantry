@@ -1,17 +1,19 @@
 class Pantry
-  attr_reader :stock
+  attr_reader :stock, :amount
 
   def initialize
     @stock = {}
-    # @item = item
+    @amount = 0
+  end
+
+  def stock_check(pantry_item)
+    @stock[pantry_item] = amount
   end
 
   def restock(pantry_item, amount)
-    @stock[pantry_item] = amount
-  end
-
-  def stock_check(pantry_item, amount=0)
-    @stock[pantry_item] = amount
+    new_amount = stock_check + amount
+    require 'pry'; binding.pry 
+    @stock[pantry_item] = new_amount
   end
 
 end
