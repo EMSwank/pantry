@@ -4,14 +4,14 @@ require 'minitest/pride'
 
 class PantryTest < Minitest::Test
   def test_it_exists
-    pantry = Pantry.new("cheese")
+    pantry = Pantry.new
 
     assert_instance_of Pantry, pantry
   end
 
-  def test_it_adds_an_item_to_the_pantry
-    pantry = Pantry.new("cheese")
+  def test_stock_is_empty_hash
+    pantry = Pantry.new
 
-    assert_equal "cheese", pantry.item
+    assert_empty {}, pantry.stock
   end
 end

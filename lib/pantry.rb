@@ -1,8 +1,8 @@
 class Pantry
-  attr_reader :item
+  attr_reader :stock
 
-  def initialize(item)
-    @item = item
+  def initialize
+    @stock = {}
   end
 
 end
