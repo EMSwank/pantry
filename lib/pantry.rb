@@ -22,8 +22,8 @@ class Pantry
     @amount = total_amount
   end
 
-  def add_to_shopping_list
-  @ingredients
+  def add_to_shopping_list(ingredient)
+    @ingredients
   end
 
 
