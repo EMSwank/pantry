@@ -12,6 +12,12 @@ class PantryTest < Minitest::Test
   def test_stock_is_empty_hash
     pantry = Pantry.new
 
-    assert_empty {}, pantry.stock
+    assert_equal({}, pantry.stock)
+  end
+
+  def test_it_can_add_item_to_check_stock
+    pantry = Pantry.new("Cheese")
+
+    assert_equal 0, pantry.stock_check
   end
 end
