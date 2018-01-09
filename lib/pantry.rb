@@ -6,13 +6,16 @@ class Pantry
     @amount = 0
   end
 
+  def stock_types
+    @stock.keys
+  end
+
   def stock_check(pantry_item)
     @stock[pantry_item] = amount
   end
 
   def restock(pantry_item, amount)
     new_amount = stock_check + amount
-    require 'pry'; binding.pry 
     @stock[pantry_item] = new_amount
   end
 
