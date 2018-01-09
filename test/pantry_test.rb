@@ -54,10 +54,11 @@ class PantryTest < Minitest::Test
   end
 
   def test_it_adds_to_shopping_list
+    pantry = Pantry.new
     r = Recipe.new("Cheese Pizza")
     r.add_ingredient("Cheese", 20)
     r.add_ingredient("Flour", 20)
 
-    assert_equal({"Cheese" => 20, "Flour" => 20}, pantry.add_to_shopping_list(r)
+    assert_equal({"Cheese" => 20, "Flour" => 20}, pantry.add_to_shopping_list(r))
   end
 end

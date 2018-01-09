@@ -1,3 +1,5 @@
+require 'recipe'
+
 class Pantry
   attr_reader :stock, :amount
 
@@ -19,5 +21,10 @@ class Pantry
     @stock[pantry_item] = total_amount
     @amount = total_amount
   end
+
+  def add_to_shopping_list
+  @ingredients
+  end
+
 
 end

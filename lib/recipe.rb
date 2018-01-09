@@ -17,6 +17,4 @@ class Recipe
   def amount_required(ingredient_name)
     @ingredients[ingredient_name]
   end
-
-  
 end
